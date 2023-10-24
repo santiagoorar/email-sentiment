@@ -1,54 +1,58 @@
-# Email Sentiment Analysis Project
+# Email Sentiment Analysis Project (Ongoing)
+
 ## Overview
-This project aims to determine the sentiment of received emails and store the sentiment analysis results in a database per mail sender. The idea business goal behind it, it´s the company to be able to "track" how happy their customers are over the time and take actions through personalized mails. 
-The project utilizes pre-trained language models, specifically leveraging the Hugging Face Transformers library, for sentiment analysis. The AWS cloud platform is used for model deployment and database storage. More detailed information of each step will be provided in the README of each folders. 
+
+This project aims to determine the sentiment of received emails and store the sentiment analysis results in a database per mail sender. The idea business goal behind it, it´s the company to be able to "track" how happy their customers are over the time and take actions through personalized mails. The project utilizes pre-trained language models, specifically leveraging the Hugging Face Transformers library, for sentiment analysis. The AWS cloud platform is used for model deployment and database storage. More detailed information of each step will be provided in the README of each folders.
 
 ## Project Structure
+
 The project is structured as follows:
 
-src/: Contains the source code for the sentiment analysis model and API.
+src/: Contains the information of the tokenizer and best model.
 
-data/: Placeholder for storing datasets and preprocessed data.
+data/: Placeholder for storing the dataset. Information about the dataset can be found in the readme of the data folder.
 
-scripts/: Scripts for data preprocessing and model training.
+scripts/: Scripts for model training, EDA and some tests with emails.
 
-docs/: Documentation related to the project.
-
-notebooks/: Jupyter notebooks for experimenting and analysis.
-
-config/: Configuration files for the project.
+static/, templates/ : For editing the webpage.
 
 ## Steps to Reproduce
+
+### Clone the repository
+
+``` bash
+https://github.com/santiagoorar/email-sentiment
+```
+
 ### Setup Environment:
 
-Set up the required Python environment with dependencies by following the instructions in src/README.md.
+Set up the required Python environment with dependencies:
 
-### Data Preprocessing:
+``` bash
+pip install -r requirements.txt
+```
 
-Preprocess the email data and prepare it for training. Refer to the scripts/preprocess.py script.
+### Open the app
 
-### Train the Sentiment Analysis Model:
+``` bash
+python app.py
+```
 
-Fine-tune a pre-trained language model for sentiment analysis using the provided training script (scripts/train_model.py).
+### The webpage
 
-### Model Deployment on AWS:
+For this, fast api was used. After adding an email, automatically it will give its sentiment.
 
-Launch an AWS EC2 instance and deploy the sentiment analysis model as a RESTful API.
-### Database Setup on AWS:
+At first, the webpage was set by default:
 
-Choose and configure an AWS database service to store the sentiment analysis results.
-### Connect API with Database:
+![Default Webpage](Images/Webpage.jpeg)
 
-Modify the API to store sentiment analysis results in the database.
-### Testing and Validation:
+Then, the webpage was modified using html code:
 
-Test the API for sentiment analysis and database storage functionality.
-### Monitoring and Maintenance:
+![Modified Webpage](Images/Webpage_modified.jpeg)
 
-Set up monitoring for the API and AWS services to track performance and usage.
-### Contributing
-Contributions to the project are welcome! If you find any issues or have suggestions for improvement, please create an issue or submit a pull request.
+## Deployment
 
-### Contact
-For inquiries or assistance, please contact sormando@correo.um.edu.uy
+For the deployment a EC2 machine was created...
+
+
 
