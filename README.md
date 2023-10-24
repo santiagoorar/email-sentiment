@@ -52,6 +52,8 @@ Then, the webpage was modified using html code:
 
 ## Deployment
 
+After having the model, the dockerfile...
+
 For the deployment a EC2 machine was created...
 
 
