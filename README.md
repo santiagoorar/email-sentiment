@@ -1,4 +1,4 @@
-# Email Sentiment Analysis Project (Ongoing)
+# Email Sentiment Analysis Project
 
 ## Overview
 
@@ -54,13 +54,24 @@ Then, the webpage was modified using html code:
 
 After having the optimal paremeters of the model and the dockerfile, the following steps were carried on for the deployment on AWS:
 
--   An IAM user was created
--   Inside the user, in security credentials, a new access key was created in the CLI format
--   An ECR (Elastic Container Registry) was created to save the docker image
--   An EC2 machine was created. Just a CPU machine for cost reasons
--   Docker was installed in the EC2 machine
--   GitHub action was configured with the EC2 machine (Also the GitHub secret keys were added in the code)
+-   An IAM user was created.
+-   Inside the user, in security credentials, a new access key was created in the CLI format.
+-   An ECR (Elastic Container Registry) was created to save the docker image.
+-   An EC2 machine was created. Just a CPU machine for cost reasons.
+-   Docker was installed in the EC2 machine.
+-   GitHub action was configured with the EC2 machine (Also the GitHub secret keys were added in the code).
 
-#### Remarks: In the project only the predict pipeline was deployed, that of course in a real project also the train and test pipelines must be deployed as well, but to avoid computational costs of AWS was done in this format.
+#### Remarks: In the project only the predict pipeline was deployed, that of course in a real project also the train and test pipelines must be deployed as well, but to avoid computational costs of AWS it was done in this format.
+
+## What to do next?
+
+A database will be generated, with the aim of storing not only the sentiment of the email, but also the email address of the sender. With this, the companies will be able to "track" the email sentiments per sender over time. 
+
+
+
+For deployment part I learnt the steps from the following repository:
+https://github.com/krishnaik06/Text-Summarization-NLP-Project
+
+
 
 
