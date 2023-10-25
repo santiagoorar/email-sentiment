@@ -52,9 +52,15 @@ Then, the webpage was modified using html code:
 
 ## Deployment
 
-After having the model, the dockerfile...
+After having the optimal paremeters of the model and the dockerfile, the following steps were carried on for the deployment on AWS:
 
-For the deployment a EC2 machine was created...
+-   An IAM user was created
+-   Inside the user, in security credentials, a new access key was created in the CLI format
+-   An ECR (Elastic Container Registry) was created to save the docker image
+-   An EC2 machine was created. Just a CPU machine for cost reasons
+-   Docker was installed in the EC2 machine
+-   GitHub action was configured with the EC2 machine (Also the GitHub secret keys were added in the code)
 
+#### Remarks: In the project only the predict pipeline was deployed, that of course in a real project also the train and test pipelines must be deployed as well, but to avoid computational costs of AWS was done in this format.
 
 
